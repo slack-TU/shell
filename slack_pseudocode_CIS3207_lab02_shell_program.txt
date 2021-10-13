@@ -1,0 +1,70 @@
+#includes stdio, stdlib, unistd, iostream, errno.h, string.h
+extern char *environ[];
+extern int errno;
+
+char* builtins = {"cd", "clr", "dir", "environ", "echo", "help", "pause", "quit"}
+
+const char delim[4] = " /t/n";
+
+launch command( char** argv )
+
+main()
+{
+  int arg_c = 0;
+  char* argv[100]
+  
+  while (shell operates){
+
+   print("$")
+   
+   char *input_command = NULL;
+   size_t len = 0;
+   ssize_t read;
+
+  read = getline(input_command, stdin);
+  
+  
+
+  char *token = strtok(input command string, " ")
+  while(token)
+  {
+    argv[arg_c] = token
+    arg_c++
+    token = strtok(NULL, delim);
+  }
+
+  argv[argc] = NULL
+
+
+  //launch command()
+
+  }
+}
+
+{}
+
+launch command( char** argv ){
+
+  if (fork() == 0) //CHILD
+  {
+    execvp( argv[0], argv );
+  }
+
+  else
+  {
+    int status = 0;
+    wait(&status);
+  }
+}
+
+
+//BUILTINS
+void clr(){
+  printf(“\e[1;1H\e[2J”);
+}
+
+void pause(){
+
+}
+
+
